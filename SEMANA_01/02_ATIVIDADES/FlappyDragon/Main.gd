@@ -17,7 +17,7 @@ func _process(delta):
 	if status == 1: # jogando
 		
 		# movimenta o cenário do fundo
-		$background.position.x -= 1*x
+		$background.position.x -= 3*x
 		if ($background.position.x) < -200:
 			$background.position.x = 600
 			
@@ -35,9 +35,7 @@ func _process(delta):
 			$dragon.position.y = 480
 			status = 0 # muda o status para "parado"
 
-		# se bateu no teto, não sobe mais
-		if $dragon.position.y < -20:
-			$dragon.position.y = -20
+	
 			
 		# se apertou seta para baixo, aumenta o valor de y (posição vertical) do dragão
 		if Input.is_action_pressed("ui_down"):
