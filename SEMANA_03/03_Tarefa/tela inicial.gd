@@ -2,9 +2,11 @@ extends Node2D
 
 var dados :Array = []
 var valor
+var lista
 
 func _on_Button_pressed():
-	$ColorRect2/lista.text = String("1, 2, 3, 4, 5")
+	lista = [1, 2, 3, 4, 5]
+	$ColorRect2/lista.text = String(lista)
 
 
 func _on_Button2_pressed():
@@ -19,5 +21,4 @@ func _on_Button3_pressed():
 
 func _on_Button4_pressed():
 	valor = float($LineEdit.text)
-	
 	$ColorRect4/value.text = str(valor)
